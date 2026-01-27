@@ -38,18 +38,32 @@ const STAND = document.getElementById("STAND");
 const HISTORY = document.getElementById("HISTORY")
 const DELETE_HISTORY = document.getElementById("DELETE_HISTORY")
 
-const playertotal = [0]
+const playertotal = [0];
 
-const AItotal = [0]
+const AItotal = [0];
 
-const wincounter = [0]
+const wincounter = [0];
 
-const playercardtotal = [0]
+const playercardtotal = [0];
+
+const algurithem = (playercardtotal, aicardtotal) => {
+  while (playercardtotal < 21){
+    if (){
+      //player clicks hit button
+    }
+    if (){
+      //player clicks stand button
+    }
+  } 
+};
 
 HIT.addEventListener("click", async function () {
-  if (playercardtotal = 0) {
+  if (playercardtotal > 21) {
+    console.log("You already LOST, start a new game")
+  } else {
 
   }
+
 });
 
 STAND.addEventListener("click", async function () {
