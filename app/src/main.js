@@ -5,8 +5,8 @@ const PAPER = document.getElementById("PAPER");
 const SCISSOR = document.getElementById("SCISSOR")
 const HISTORY = document.getElementById("HISTORY")
 const playerwin = [0]
+const win = false
 
-const algurithem = (paper, scissor, rock)=>  {
   while (!win){
     ROCK.addEventListener("click", async function () {
       const AIside = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
@@ -48,6 +48,6 @@ const algurithem = (paper, scissor, rock)=>  {
       }
     });
   } 
-};
+
 
 
