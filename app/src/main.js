@@ -1,80 +1,53 @@
 import './style.css'
 
-const cardlist = [
-  {
-  Number: 1,
-  },
-  {
-  Number: 2,
-  },
-  {
-  Number: 3,
-  },
-  {
-  Number: 4,
-  },
-  {
-  Number: 5,
-  },
-  {
-  Number: 6,
-  },
-  {
-  Number: 7,
-  },
-  {
-  Number: 8,
-  },
-  {
-  Number: 9,
-  },
-  {
-  Number: 10,
-  },
-]
-
-const HIT = document.getElementById("HIT");
-const STAND = document.getElementById("STAND");
+const ROCK = document.getElementById("ROCK");
+const PAPER = document.getElementById("PAPER");
+const SCISSOR = document.getElementById("SCISSOR")
 const HISTORY = document.getElementById("HISTORY")
-const DELETE_HISTORY = document.getElementById("DELETE_HISTORY")
+const playerwin = [0]
 
-const playertotal = [0];
-
-const AItotal = [0];
-
-const wincounter = [0];
-
-const playercardtotal = [0];
-
-const algurithem = (playercardtotal, aicardtotal) => {
-  while (playercardtotal < 21){
-    if (HIT = true){
-      //player clicks hit button
-    }
-    if (STAND = true){
-      //player clicks stand button
-    }
+const algurithem = (paper, scissor, rock)=>  {
+  while (!win){
+    ROCK.addEventListener("click", async function () {
+      const AIside = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+      if (AIside = 3) {
+        console.log("Its a draw, none wins") //rock
+      } else if (AIside = 2) {
+        console.log("Its a win, nice") //scissors
+        playerwin++
+        win = true
+        return(win)
+      } if (AIside = 1) {
+        console.log("Its a lost, go again!") //paper
+      }
+      });
+    PAPER.addEventListener("click", async function () {
+      const AIside = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+      if (AIside = 3) {
+        console.log("Its a win, nice") //rock
+        playerwin++
+        win = true
+        return(win)
+      } else if (AIside = 2) {
+        console.log("Its a lost, go again!") //scissors
+      } if (AIside = 1) {
+        console.log("Its a draw, none wins") //paper
+      }
+      });
+    SCISSOR.addEventListener("click", async function () {
+      const AIside = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+      if (AIside = 3) {
+        console.log("Its a lost, go again!") //rock
+      } else if (AIside = 2) {
+        console.log("Its a draw, none wins") //scissors
+      } if (AIside = 1) {
+        console.log("Its a win, nice") //paper
+        playerwin++
+        win = true
+        return(win)
+      }
+    });
   } 
 };
 
-HIT.addEventListener("click", async function () {
-  if (playercardtotal > 21) {
-    console.log("You already LOST, start a new game")
-  } else {
-    const rngnumber = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-    generatednumber = cardlist.rngnumber
-  }
 
-});
-
-STAND.addEventListener("click", async function () {
-
-});
-
-HISTORY.addEventListener("click", async function () {
-
-});
-
-DELETE_HISTORY.addEventListener("click", async function () {
-
-});
