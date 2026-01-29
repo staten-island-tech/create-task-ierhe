@@ -4,7 +4,7 @@ const ROCK = document.getElementById("ROCK");
 const PAPER = document.getElementById("PAPER");
 const SCISSOR = document.getElementById("SCISSOR")
 const playerwin = [0]
-const win = "false"
+let win = "false"
 
 while (win = "false"){
   ROCK.addEventListener("click", async function () {
