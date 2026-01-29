@@ -3,10 +3,17 @@ import './style.css'
 const ROCK = document.getElementById("ROCK");
 const PAPER = document.getElementById("PAPER");
 const SCISSOR = document.getElementById("SCISSOR")
+const START = document.getElementById("START")
 const playerwin = [0]
+let start = "false"
 let win = "false"
 
-while (win = "false"){
+START.addEventListener("click", async function () {
+  start = "true"
+});
+
+
+while ((start = "true")){
   ROCK.addEventListener("click", async function () {
     const AIside = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
     if (AIside = 3) {
