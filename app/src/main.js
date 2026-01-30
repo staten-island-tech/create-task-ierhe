@@ -14,51 +14,57 @@ SSTART.addEventListener("click", async function () {
 
 const stuff = ["paper, rock, scssior"]
 
-async function something() {
-  await userinput
+async function something(stuff) {
+  console.log("I'M WORKING ON IT")
+  const userinput = await game();
 }
 
-while (start && !win){
-  RROCK.addEventListener("click", async function () {
-    const AIside = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-    if (AIside === 3) {
-      console.log("Its a draw, none wins") //rock
-    } else if (AIside === 2) {
-      console.log("Its a win, nice") //scissors
-      playerwin++
-      win = true
-      return(win)
-    } if (AIside === 1) {
-      console.log("Its a lost, go again!") //paper
-    }
-    });
-  PPAPER.addEventListener("click", async function () {
-    const AIside = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-    if (AIside === 3) {
-      console.log("Its a win, nice") //rock
-      playerwin++
-      win = true
-      return(win)
-    } else if (AIside === 2) {
-      console.log("Its a lost, go again!") //scissors
-    } if (AIside === 1) {
-      console.log("Its a draw, none wins") //paper
-    }
-    });
-  SSCISSOR.addEventListener("click", async function () {
-    const AIside = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-    if (AIside === 3) {
-      console.log("Its a lost, go again!") //rock
-    } else if (AIside === 2) {
-      console.log("Its a draw, none wins") //scissors
-    } if (AIside === 1) {
-      console.log("Its a win, nice") //paper
-      playerwin++
-      win = true
-      return(win)
-    }
-  });
-} 
+something();
 
+function game(){ 
+  console.log("This is working")
+  while (start && !win){
+    RROCK.addEventListener("click", async function () {
+      console.log("work please?")
+      const AIside = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+      if (AIside === 3) {
+        console.log("Its a draw, none wins") //rock
+      } else if (AIside === 2) {
+        console.log("Its a win, nice") //scissors
+        playerwin++
+        win = true
+        return(win)
+      } if (AIside === 1) {
+        console.log("Its a lost, go again!") //paper
+      }
+      });
+    PPAPER.addEventListener("click", async function () {
+      const AIside = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+      if (AIside === 3) {
+        console.log("Its a win, nice") //rock
+        playerwin++
+        win = true
+        return(win)
+      } else if (AIside === 2) {
+        console.log("Its a lost, go again!") //scissors
+      } if (AIside === 1) {
+        console.log("Its a draw, none wins") //paper
+      }
+      });
+    SSCISSOR.addEventListener("click", async function () {
+      const AIside = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+      if (AIside === 3) {
+        console.log("Its a lost, go again!") //rock
+      } else if (AIside === 2) {
+        console.log("Its a draw, none wins") //scissors
+      } if (AIside === 1) {
+        console.log("Its a win, nice") //paper
+        playerwin++
+        win = true
+        return(win)
+      }
+    });
+  } 
+}
 
 
