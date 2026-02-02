@@ -4,37 +4,63 @@ const RROCK = document.getElementById("ROCK");
 const PPAPER = document.getElementById("PAPER");
 const SSCISSOR = document.getElementById("SCISSOR")
 const SSTART = document.getElementById("START")
-const playerwin = 0
+let playerwin = 0
 let start = false
 let win = false
 
 SSTART.addEventListener("click", async function () {
-  start = true
+  game()
+  
 });
 
 const stuff = ["paper, rock, scssior"]
 
-async function something(stuff) {
+async function something() {
   console.log("I'M WORKING ON IT")
-  const userinput = await game();
+  game(stuff);
 }
 
 something();
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
 function game(){ 
   console.log("This is working")
-  while (start && !win){
     RROCK.addEventListener("click", async function () {
       console.log("work please?")
-      const AIside = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-      if (AIside === 3) {
+      const getRandomInt = Math.floor(Math.random() * 3)
+      console.log(getRandomInt)
+      if (getRandomInt === 1) {
         console.log("Its a draw, none wins") //rock
-      } else if (AIside === 2) {
+      } else if (getRandomInt === 2) {
         console.log("Its a win, nice") //scissors
         playerwin++
         win = true
         return(win)
-      } if (AIside === 1) {
+      } if (getRandomInt === 0) {
+        console.log("Its a lost, go again!") //paper
+      }
+      });
+  }
+
+
+  
+/* function game(){ 
+  console.log("This is working")
+  while (){
+    RROCK.addEventListener("click", async function () {
+      console.log("work please?")
+      getRandomInt(3)
+      if (AIside === getRandomInt) {
+        console.log("Its a draw, none wins") //rock
+      } else if (AIside === getRandomInt) {
+        console.log("Its a win, nice") //scissors
+        playerwin++
+        win = true
+        return(win)
+      } if (AIside === getRandomInt) {
         console.log("Its a lost, go again!") //paper
       }
       });
@@ -67,4 +93,4 @@ function game(){
   } 
 }
 
-
+ */
