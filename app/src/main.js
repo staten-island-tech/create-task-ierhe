@@ -13,7 +13,7 @@ SSTART.addEventListener("click", async function () {
   
 });
 
-const stuff = ["paper, rock, scssior"]
+const stuff = ["paper", "rock", "scissor"]
 
 async function something() {
   console.log("I'M WORKING ON IT")
@@ -28,22 +28,25 @@ function getRandomInt(max) {
 
 function game(){ 
   console.log("This is working")
-    RROCK.addEventListener("click", async function () {
+    RROCK.onclick = function() {
       console.log("work please?")
-      const getRandomInt = Math.floor(Math.random() * 3)
-      console.log(getRandomInt)
-      if (getRandomInt === 1) {
+      const computer = getRandomInt(stuff.length);
+      const computerother = stuff[computer];
+      console.log(computerother)
+      if (computerother === "rock") {
         console.log("Its a draw, none wins") //rock
-      } else if (getRandomInt === 2) {
-        console.log("Its a win, nice") //scissors
+      } else if (computerother === "scissor") {
+        console.log("Its a win, nice") //scissor
+        text = "WIN";
+        Box.appendChild(text);
         playerwin++
         win = true
         return(win)
-      } if (getRandomInt === 0) {
+      } else if (computerother === "paper") {
         console.log("Its a lost, go again!") //paper
       }
-      });
-  }
+    };
+}
 
 
   
