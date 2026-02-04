@@ -10,24 +10,28 @@ let win = false
 
 SSTART.addEventListener("click", async function () {
   game()
-  
 });
 
 const stuff = ["paper", "rock", "scissor"]
-
-async function something() {
-  console.log("I'M WORKING ON IT")
-  game(stuff);
-}
-
-something();
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-function game(){ 
+
+
+function thegame(something){
+  const computer = getRandomInt(stuff.length);
+      const computerother = stuff[computer];
+}
+
+
+
+
+
+/* function game(){ 
   console.log("This is working")
+  while (!win){
     RROCK.onclick = function() {
       console.log("work please?")
       const computer = getRandomInt(stuff.length);
@@ -46,8 +50,9 @@ function game(){
         console.log("Its a lost, go again!") //paper
       }
     };
-}
-
+    break;
+  }
+} */
 
   
 /* function game(){ 
