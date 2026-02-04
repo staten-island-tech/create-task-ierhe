@@ -18,11 +18,19 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-
+function game(){
+  console.log("This is working")
+  while (!win) {
+    RROCK.addEventListener("click", () => thegame("rock"));
+    PPAPER.addEventListener("click", () => thegame("paper"));
+    SSCISSOR.addEventListener("click", () => thegame("scissor"));
+    break;
+  }
+}
 
 function thegame(something){
   const computer = getRandomInt(stuff.length);
-      const computerother = stuff[computer];
+  const computerother = stuff[computer];
 }
 
 
