@@ -38,7 +38,6 @@ function thegame(something){
     (something === "scissor" && computerother === "paper")
   ) {
     console.log("WIN!");
-    playerwin++;
     win = true;
   } 
   else {
