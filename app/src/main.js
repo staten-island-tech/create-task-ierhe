@@ -35,9 +35,9 @@ function thegame(something){
     console.log("It's a draw");
   } 
   else if (
-    (something === "rock" && computerChoice === "scissor") ||
-    (something === "paper" && computerChoice === "rock") ||
-    (something === "scissor" && computerChoice === "paper")
+    (something === "rock" && computerother === "scissor") ||
+    (something === "paper" && computerother === "rock") ||
+    (something === "scissor" && computerother === "paper")
   ) {
     console.log("WIN!");
     playerwin++;
