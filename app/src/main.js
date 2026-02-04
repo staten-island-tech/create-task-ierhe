@@ -4,8 +4,6 @@ const RROCK = document.getElementById("ROCK");
 const PPAPER = document.getElementById("PAPER");
 const SSCISSOR = document.getElementById("SCISSOR")
 const SSTART = document.getElementById("START")
-let playerwin = 0
-let start = false
 let win = false
 
 SSTART.addEventListener("click", async function () {
@@ -31,7 +29,7 @@ function game(){
 function thegame(something){
   const computer = getRandomInt(stuff.length);
   const computerother = stuff[computer];
-  if (something === computerChoice) {
+  if (something === computerother) {
     console.log("It's a draw");
   } 
   else if (
