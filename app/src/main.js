@@ -31,6 +31,21 @@ function game(){
 function thegame(something){
   const computer = getRandomInt(stuff.length);
   const computerother = stuff[computer];
+  if (something === computerChoice) {
+    console.log("It's a draw");
+  } 
+  else if (
+    (something === "rock" && computerChoice === "scissor") ||
+    (something === "paper" && computerChoice === "rock") ||
+    (something === "scissor" && computerChoice === "paper")
+  ) {
+    console.log("WIN!");
+    playerwin++;
+    win = true;
+  } 
+  else {
+    console.log("again");
+  }
 }
 
 
