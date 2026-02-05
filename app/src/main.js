@@ -2,14 +2,14 @@ import './style.css'
 
 const RROCK = document.getElementById("ROCK");
 const PPAPER = document.getElementById("PAPER");
-const SSCISSOR = document.getElementById("SCISSOR")
-const SSTART = document.getElementById("START")
-let win = false
-/* let history = []; */
+const SSCISSOR = document.getElementById("SCISSOR");
+const SSTART = document.getElementById("START");
+let win = false;
+let history = [];
 let result = "";
-const history = document.querySelector('.History');
+const historybox = document.querySelector('.History');
 
-SSTART.addEventListener("click", async function () {
+SSTART.addEventListener("click", function () {
   game()
 });
 
@@ -34,8 +34,11 @@ function thegame(something){
   const computerother = stuff[computer];
   if (something === computerother) {
     console.log("It's a draw");
-    result = "draw!";
     history.push("draw!");
+    result = ("draw!");
+    const q = document.createElement("div");
+    q.textContent = result;
+    historybox.appendChild(q);
   } 
   else if (
     (something === "rock" && computerother === "scissor") ||
@@ -44,13 +47,19 @@ function thegame(something){
   ) {
     console.log("WIN!");
     win = true;
-    result = "WIN!";
-    history.push("WIN!");
+    result = ("WIN!");
+    const q = document.createElement("div");
+    q.textContent = result;
+    historybox.appendChild(q);
   } 
   else {
     console.log("again");
-    result = "LOSE";
     history.push("LOSE");
+    result = ("LOST");
+    const q = document.createElement("div");
+    q.textContent = result;
+    historybox.appendChild(q);
+    
   }
   
 }
