@@ -20,7 +20,6 @@ function getRandomInt(max) {
 }
 
 function game(){
-  console.log("This is working")
   while (!win) {
     RROCK.addEventListener("click", () => thegame("rock"));
     PPAPER.addEventListener("click", () => thegame("paper"));
