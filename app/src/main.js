@@ -35,9 +35,7 @@ function thegame(something){
     console.log("It's a draw");
     history.push("draw!");
     result = ("draw!");
-    const q = document.createElement("div");
-    q.textContent = result;
-    historybox.appendChild(q);
+    historybox.innerHTML += `<div>${result}</div>`;
   } 
   else if (
     (something === "rock" && computerother === "scissor") ||
@@ -47,18 +45,13 @@ function thegame(something){
     console.log("WIN!");
     win = true;
     result = ("WIN!");
-    const q = document.createElement("div");
-    q.textContent = result;
-    historybox.appendChild(q);
+    historybox.innerHTML += `<div>${result}</div>`;
   } 
   else {
     console.log("again");
     history.push("LOSE");
     result = ("LOST");
-    const q = document.createElement("div");
-    q.textContent = result;
-    historybox.appendChild(q);
-    
+    historybox.innerHTML += `<div>${result}</div>`;
   }
   
 }
