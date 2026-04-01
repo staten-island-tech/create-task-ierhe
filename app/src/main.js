@@ -11,7 +11,7 @@ let round = 0;
 
 SSTART.addEventListener("click", function () {
   historybox.innerHTML = "";
-  historybox.innerHTML += `<div>Game Reset! Can play 5 rounds again</div>`;
+  historybox.innerHTML += `<div>Restarted, you can play 5 rounds again</div>`;
   RROCK.disabled = false;
   PPAPER.disabled = false;
   SSCISSOR.disabled = false;
@@ -57,7 +57,7 @@ function thegame(something){
   }
   if (round >= 5) {
     console.log("Maximum rounds reached!");
-    historybox.innerHTML += `<div>Game Over! Max 5 rounds reached.</div>`;
+    historybox.innerHTML += `<div>You hit 5 round limit</div>`;
     RROCK.disabled = true;
     PPAPER.disabled = true;
     SSCISSOR.disabled = true;
